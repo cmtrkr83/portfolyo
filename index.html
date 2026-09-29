@@ -22,6 +22,7 @@
       <nav class="site-nav" id="siteNav">
         <a href="#hakkimda">Hakkımda</a>
         <a href="#yetenekler">Yetenekler</a>
+        <a href="#hizmetler">Hizmetler</a>
         <a href="#projeler">Projeler</a>
         <a href="#iletisim" class="btn btn-small">İletişim</a>
       </nav>
@@ -35,7 +36,9 @@
 
   <main id="top">
     <section class="hero">
+      <div class="hero-bg" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
       <div class="container">
+        <p class="hero-pill">Portfolyoma hoş geldin</p>
         <p class="hero-kicker">Merhaba, ben</p>
         <h1>Cem TÜRKER</h1>
         <p class="hero-sub">Öğretmen · Web Uygulamaları Geliştirici</p>
@@ -51,7 +54,8 @@
     </section>
 
     <section id="hakkimda" class="section reveal">
-      <div class="container">
+      <div class="container narrow">
+        <p class="section-kicker">Tanışalım</p>
         <h2>Hakkımda</h2>
         <p>
           Kocaeli Ölçme Değerlendirme Merkezi bünyesinde çalışıyor; okulların günlük
@@ -65,21 +69,67 @@
 
     <section id="yetenekler" class="section section-alt reveal">
       <div class="container">
+        <p class="section-kicker">Uzmanlık</p>
         <h2>Yetenekler</h2>
-        <ul class="skills">
-          <li>JavaScript</li>
-          <li>Node.js &amp; Express</li>
-          <li>HTML &amp; CSS</li>
-          <li>Veri Yönetimi &amp; Raporlama</li>
-          <li>Anket &amp; Değerlendirme Sistemleri</li>
-          <li>Docker &amp; Portainer</li>
-          <li>Cloudflare</li>
-        </ul>
+        <div class="skill-groups">
+          <div class="skill-card reveal">
+            <h3>Arayüz Geliştirme</h3>
+            <ul>
+              <li>HTML &amp; CSS</li>
+              <li>JavaScript</li>
+              <li>Responsive Tasarım</li>
+              <li>Açık / Koyu Tema</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Sunucu &amp; Veri</h3>
+            <ul>
+              <li>Node.js &amp; Express</li>
+              <li>Veri Yönetimi &amp; Raporlama</li>
+              <li>Anket &amp; Değerlendirme Sistemleri</li>
+              <li>JWT ile Güvenli Giriş</li>
+            </ul>
+          </div>
+          <div class="skill-card reveal">
+            <h3>Yayın &amp; Altyapı</h3>
+            <ul>
+              <li>Docker &amp; Portainer</li>
+              <li>Cloudflare</li>
+              <li>Linux Sunucu Yönetimi</li>
+              <li>Otomatik Yayın (CI)</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="projeler" class="section reveal">
+    <section id="hizmetler" class="section reveal">
       <div class="container">
+        <p class="section-kicker">Neler Yapıyorum</p>
+        <h2>Hizmetler</h2>
+        <div class="services-grid">
+          <div class="service-card reveal">
+            <div class="service-icon">◈</div>
+            <h3>Kurumsal Yönetim Panelleri</h3>
+            <p>Kullanıcı, duyuru ve içerik yönetimini tek panelde toplayan, role dayalı yetkilendirmeli web uygulamaları.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">◎</div>
+            <h3>Veri Toplama &amp; Anket Sistemleri</h3>
+            <p>Okullardan hızlı veri toplama, anket oluşturma ve sonuçları raporlama altyapıları.</p>
+          </div>
+          <div class="service-card reveal">
+            <div class="service-icon">▣</div>
+            <h3>Dosya &amp; Belge Yönetimi</h3>
+            <p>Güvenli dosya dağıtımı, belge istekleri ve talep/itiraz takip süreçleri için uçtan uca çözümler.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projeler" class="section section-alt reveal">
+      <div class="container">
+        <p class="section-kicker">Çalışmalarım</p>
         <h2>Projeler</h2>
         <article class="project-card reveal">
           <div class="project-tag">GitHub</div>
@@ -93,19 +143,27 @@
       </div>
     </section>
 
-    <section id="iletisim" class="section section-alt reveal">
-      <div class="container contact">
-        <h2>İletişim</h2>
-        <p>Bana ulaşmak için GitHub profilim üzerinden mesaj gönderebilirsin.</p>
-        <a class="btn" href="https://github.com/cmtrkr83" target="_blank" rel="noopener">GitHub'dan Yaz</a>
-        <p class="location">Kocaeli, Türkiye</p>
+    <section id="iletisim" class="section reveal">
+      <div class="container">
+        <div class="contact-card reveal">
+          <p class="section-kicker">Bağlantı Kuralım</p>
+          <h2>İletişim</h2>
+          <p>Bana ulaşmak için GitHub profilim üzerinden mesaj gönderebilirsin.</p>
+          <a class="btn" href="https://github.com/cmtrkr83" target="_blank" rel="noopener">GitHub'dan Yaz</a>
+          <p class="location">Kocaeli, Türkiye</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
+    <div class="container footer-inner">
       <p>© <span id="year"></span> Cem TÜRKER. Tüm hakları saklıdır.</p>
+      <nav class="footer-nav">
+        <a href="#hakkimda">Hakkımda</a>
+        <a href="#projeler">Projeler</a>
+        <a href="#iletisim">İletişim</a>
+      </nav>
     </div>
   </footer>
 

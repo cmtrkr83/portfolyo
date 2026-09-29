@@ -36,7 +36,7 @@ const sectionObserver = new IntersectionObserver(
   },
   { rootMargin: "-40% 0px -55% 0px" }
 );
-["hakkimda", "yetenekler", "projeler", "iletisim"].forEach((id) => {
+["hakkimda", "yetenekler", "hizmetler", "projeler", "iletisim"].forEach((id) => {
   const el = document.getElementById(id);
   if (el) sectionObserver.observe(el);
 });
