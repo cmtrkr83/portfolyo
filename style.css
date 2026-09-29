@@ -6,8 +6,24 @@
   --border: #e6e8ee;
   --accent: #1f3a5f;
   --accent-hover: #162945;
+  --accent-soft: rgba(31, 58, 95, 0.08);
+  --header-bg: rgba(255, 255, 255, 0.92);
+  --card: #ffffff;
   --radius: 12px;
   --maxw: 880px;
+}
+
+html[data-theme="dark"] {
+  --bg: #10151f;
+  --bg-alt: #182032;
+  --text: #e9edf5;
+  --muted: #9aa5b8;
+  --border: #2b3549;
+  --accent: #8fb4e3;
+  --accent-hover: #a9c6ec;
+  --accent-soft: rgba(143, 180, 227, 0.14);
+  --header-bg: rgba(16, 21, 31, 0.92);
+  --card: #161d2c;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -29,7 +45,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 10;
-  background: rgba(255, 255, 255, 0.92);
+  background: var(--header-bg);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
 }
@@ -41,8 +57,29 @@ body {
   height: 64px;
 }
 
-.brand { font-size: 20px; font-weight: 800; color: var(--text); text-decoration: none; letter-spacing: -0.5px; }
-.brand span { color: var(--accent); }
+.brand { display: inline-flex; align-items: center; text-decoration: none; }
+.brand-logo { height: 34px; width: auto; display: block; }
+
+/* Beyaz logo: açık temada siyaha çevir, koyu temada aynen bırak */
+html[data-theme="light"] .brand-logo { filter: invert(1); }
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.theme-toggle:hover { background: var(--accent-soft); }
+.theme-toggle .icon-moon { display: none; }
+html[data-theme="dark"] .theme-toggle .icon-sun { display: none; }
+html[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
 
 .site-nav { display: flex; align-items: center; gap: 26px; }
 .site-nav a { color: var(--muted); text-decoration: none; font-size: 15px; font-weight: 500; }
@@ -76,7 +113,7 @@ body {
 .btn:hover { background: var(--accent-hover); }
 .btn-small { padding: 8px 20px; font-size: 14px; }
 .btn-ghost { background: transparent; color: var(--accent); }
-.btn-ghost:hover { background: rgba(31, 58, 95, 0.07); }
+.btn-ghost:hover { background: var(--accent-soft); }
 
 /* Hero */
 .hero { padding: 110px 0 90px; text-align: center; }
@@ -132,7 +169,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--accent);
-  background: rgba(31, 58, 95, 0.08);
+  background: var(--accent-soft);
   border-radius: 999px;
   padding: 4px 14px;
   margin-bottom: 14px;
