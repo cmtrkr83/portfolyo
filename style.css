@@ -199,6 +199,25 @@ html[data-theme="dark"] .theme-toggle .icon-moon { display: block; }
 .site-footer { border-top: 1px solid var(--border); padding: 26px 0; text-align: center; }
 .site-footer p { color: var(--muted); font-size: 14px; }
 
+/* Scroll animasyonları */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.site-nav a.active { color: var(--accent); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+}
+
 /* Mobile */
 @media (max-width: 640px) {
   .hero { padding: 72px 0 60px; }
