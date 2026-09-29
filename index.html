@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cem TÜRKER — Portfolyo</title>
+  <meta name="description" content="Cem TÜRKER — Ölçme ve değerlendirme uzmanı, web uygulamaları geliştirici. Projeler, yetenekler ve iletişim." />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top">CT<span>.</span></a>
+      <nav class="site-nav" id="siteNav">
+        <a href="#hakkimda">Hakkımda</a>
+        <a href="#yetenekler">Yetenekler</a>
+        <a href="#projeler">Projeler</a>
+        <a href="#iletisim" class="btn btn-small">İletişim</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menü">☰</button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container">
+        <p class="hero-kicker">Merhaba, ben</p>
+        <h1>Cem TÜRKER</h1>
+        <p class="hero-sub">Ölçme &amp; Değerlendirme Uzmanı · Web Uygulamaları Geliştirici</p>
+        <p class="hero-desc">
+          Eğitimde veri toplama, anket ve dosya yönetimi için güvenli ve kullanışlı
+          web sistemleri geliştiriyorum.
+        </p>
+        <div class="hero-actions">
+          <a href="#projeler" class="btn">Projelerimi Gör</a>
+          <a href="#iletisim" class="btn btn-ghost">İletişime Geç</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="hakkimda" class="section">
+      <div class="container">
+        <h2>Hakkımda</h2>
+        <p>
+          Kocaeli Ölçme Değerlendirme Merkezi bünyesinde çalışıyor; okulların günlük
+          işlerini kolaylaştıran web uygulamaları tasarlayıp geliştiriyorum. Duyuru ve
+          anket sistemlerinden güvenli dosya paylaşımına kadar uçtan uca çözümler
+          üretiyorum — fikirden canlıya alma aşamasına kadar tüm süreci üstleniyorum.
+        </p>
+      </div>
+    </section>
+
+    <section id="yetenekler" class="section section-alt">
+      <div class="container">
+        <h2>Yetenekler</h2>
+        <ul class="skills">
+          <li>JavaScript</li>
+          <li>Node.js &amp; Express</li>
+          <li>HTML &amp; CSS</li>
+          <li>Veri Yönetimi &amp; Raporlama</li>
+          <li>Anket &amp; Değerlendirme Sistemleri</li>
+          <li>OTP ile Güvenli Giriş (SMTP)</li>
+          <li>Docker &amp; Portainer</li>
+          <li>Cloudflare</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projeler" class="section">
+      <div class="container">
+        <h2>Projeler</h2>
+        <article class="project-card">
+          <div class="project-tag">GitHub</div>
+          <h3>Çalışmalarım GitHub'da</h3>
+          <p>
+            Geliştirdiğim uygulamaların kaynak kodları ve diğer çalışmalarım
+            GitHub profilimde yer alıyor.
+          </p>
+          <a class="project-link" href="https://github.com/cmtrkr83" target="_blank" rel="noopener">github.com/cmtrkr83 →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="iletisim" class="section section-alt">
+      <div class="container contact">
+        <h2>İletişim</h2>
+        <p>Bir proje fikrin veya iş birliği önerin mi var? Yazman yeterli.</p>
+        <!-- NOT: e-posta adresi tahmini yazıldı, değişecekse söyleyin -->
+        <a class="btn" href="mailto:info@turker.cc">info@turker.cc</a>
+        <p class="location">Kocaeli, Türkiye</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Cem TÜRKER. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+</html>
